@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.mycompany.wangzihaopruebatecnica1"},{"l":"com.mycompany.wangzihaopruebatecnica1.controllers"},{"l":"com.mycompany.wangzihaopruebatecnica1.exceptions"},{"l":"com.mycompany.wangzihaopruebatecnica1.models"},{"l":"com.mycompany.wangzihaopruebatecnica1.services"}];updateSearchResults();
