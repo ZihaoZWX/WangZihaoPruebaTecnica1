@@ -1,10 +1,4 @@
-<div style="display: flex; align-items: center;">
-  <img src="img/ZWXLogo.png" alt="Logo" style="max-width: 50%; margin-right: 20px;">
-  <div>
-    <h1>Gestor de empleados</h1>
-  </div>
-</div>
-
+![Logo](img/ZWX.png)
 ### Proyecto realizado por Zihao Wang
 Programa capaz de gestionar los empleados de una empresa sin interfaz
 ### Requisitos
