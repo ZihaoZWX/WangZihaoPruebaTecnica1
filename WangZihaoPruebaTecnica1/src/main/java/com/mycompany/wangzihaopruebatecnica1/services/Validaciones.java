@@ -39,7 +39,6 @@ public class Validaciones {
         diaMes.put(11,30);
         diaMes.put(12,31);
         int diaMax=diaMes.get(month);
-        System.out.println(diaMax);
         if(day>diaMax){
             return true;
         }else{

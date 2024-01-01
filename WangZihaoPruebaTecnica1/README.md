@@ -1,3 +1,0 @@
-# Encabezado
-## Algo
-### Algo2
