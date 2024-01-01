@@ -12,10 +12,11 @@ import javax.persistence.Table;
 
 /**
  *
+ * Clase Empleados que implementa Serializable.
+ * Anotacion de Entity para indicar que es una entidad.
+ * Anotacion Table para indicar que es una Tabla con nombre empleados.
+ * 
  * @author Zihao Wang
- * Clase Empleados que implementa Serializable
- * Anotacion de Entity para indicar que es una entidad
- * Anotacion Table para indicar que es una Tabla con nombre empleados
  */
 @Entity
 @Table(name="empleados")
@@ -44,12 +45,12 @@ public class Empleados implements Serializable {
 
     /**
      * Constructor con los siguientes parametros
-     * @param dni
-     * @param nombre
-     * @param apellido
-     * @param cargo
-     * @param salario
-     * @param fecha 
+     * @param dni String
+     * @param nombre String
+     * @param apellido String
+     * @param cargo String
+     * @param salario Double
+     * @param fecha LocalDate
      */
     public Empleados(String dni,String nombre, String apellido, String cargo, Double salario, LocalDate fecha) {
         this.dni=dni;
@@ -62,7 +63,7 @@ public class Empleados implements Serializable {
 
     /**
      * 
-     * @return id 
+     * @return id
      */
     public Long getId() {
         return id;
@@ -70,7 +71,7 @@ public class Empleados implements Serializable {
 
     /**
      * 
-     * @param id 
+     * @param id Long
      */
     public void setId(Long id) {
         this.id = id;
@@ -78,7 +79,7 @@ public class Empleados implements Serializable {
 
     /**
      * 
-     * @return 
+     * @return dni
      */
     public String getDni() {
         return dni;
@@ -86,7 +87,7 @@ public class Empleados implements Serializable {
 
     /**
      * 
-     * @param dni 
+     * @param dni String
      */
     public void setDni(String dni) {
         this.dni = dni;
@@ -102,7 +103,7 @@ public class Empleados implements Serializable {
 
     /**
      * 
-     * @param nombre 
+     * @param nombre String
      */
     public void setNombre(String nombre) {
         this.nombre = nombre;
@@ -118,7 +119,7 @@ public class Empleados implements Serializable {
 
     /**
      * 
-     * @param apellido 
+     * @param apellido String
      */
     public void setApellido(String apellido) {
         this.apellido = apellido;
@@ -134,7 +135,7 @@ public class Empleados implements Serializable {
 
     /**
      * 
-     * @param cargo 
+     * @param cargo String
      */
     public void setCargo(String cargo) {
         this.cargo = cargo;
@@ -150,7 +151,7 @@ public class Empleados implements Serializable {
 
     /**
      * 
-     * @param salario 
+     * @param salario Double
      */
     public void setSalario(Double salario) {
         this.salario = salario;
@@ -166,7 +167,7 @@ public class Empleados implements Serializable {
 
     /**
      * 
-     * @param fecha 
+     * @param fecha LocalDate
      */
     public void setFecha(LocalDate fecha) {
         this.fecha = fecha;

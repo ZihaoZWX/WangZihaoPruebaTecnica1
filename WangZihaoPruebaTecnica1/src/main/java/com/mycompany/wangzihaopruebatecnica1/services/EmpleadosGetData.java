@@ -7,8 +7,9 @@ import java.util.Scanner;
 
 /**
  *
- * @author Zihao Wang Clase para obtener los datos necesarios para crear y editar
  * Clase con todos los metodos necesarios con su correspondida verificacion para retornar los datos necesarios para la creacion y edicion de empleados
+ * 
+ * @author Zihao Wang Clase para obtener los datos necesarios para crear y editar
  */
 public class EmpleadosGetData {
 
@@ -24,14 +25,13 @@ public class EmpleadosGetData {
 
     /**
      *
-     * Metodo con parametros
+     * Metodo con parametros para obtener un dni y verificar que cumplan los requisitos necesarios.
+     * Usamos el findEmployerDni creado antes para verificar que el dni es unico.
      *
-     * @param sc
+     * @param sc Scanner
      * @param editar Parametro booleano para identificar una edicion a una creacion
-     * @param controller
-     * @return dni 
-     * Metodo para obtener un dni y verificar que cumplan los requisitos necesarios 
-     * Usamos el findEmployerDni creado antes para verificar que el dni es unico
+     * @param controller PersistenceController
+     * @return dni
      */
     protected String getDni(Scanner sc, boolean editar, PersistenceController controller) {
         String dni;
@@ -56,15 +56,15 @@ public class EmpleadosGetData {
 
     /**
      *
-     * Metodo con parametros
+     * Metodo con parametros que deja libertad a la hora de eligir un nombre para el empleado .
+     * Contiene un unico filtro el cual impide que metamos nombres vacios .
+     * Se elimina espacios existentes delante y atras del nombre.
+     * Evita entrada de caracteres invalidos.
      *
-     * @param sc
+     * @param sc Scanner
      * @param editar Parametro booleano para identificar una edicion a una creacion
      * @return nombre 
-     * Metodo que deja libertad a la hora de eligir un nombre para el empleado 
-     * Contiene un unico filtro el cual impide que metamos nombres vacios 
-     * Se elimina espacios existentes delante y atras del nombre
-     * Evita entrada de caracteres invalidos
+     * 
      */
     protected String getNombre(Scanner sc, boolean editar) {
         String nombre;
@@ -77,15 +77,15 @@ public class EmpleadosGetData {
 
     /**
      *
-     * Metodo con parametros
+     * Metodo con parametros que deja cierta libertad a la hora de eligir un apellido para el empleado .
+     * Contiene un unico filtro el cual impide que metamos apellidos vacios .
+     * Se elimina espacios existentes delante y atras del apellido.
+     * Evita entrada de caracteres invalidos.
      *
-     * @param sc
+     * @param sc Scanner
      * @param editar Parametro booleano para identificar una edicion a una creacion
      * @return apellido 
-     * Metodo que deja cierta libertad a la hora de eligir un apellido para el empleado 
-     * Contiene un unico filtro el cual impide que metamos apellidos vacios 
-     * Se elimina espacios existentes delante y atras del apellido
-     * Evita entrada de caracteres invalidos
+     * 
      */
     protected String getApellido(Scanner sc, boolean editar) {
         String apellido;
@@ -98,15 +98,15 @@ public class EmpleadosGetData {
 
     /**
      *
-     * Metodo con parametros
+     * Metodo con parametros que deja cierta libertad a la hora de eligir un cargo para el empleado.
+     * Contiene un unico filtro el cual impide que metamos cargos vacios. 
+     * Se elimina espacios existentes delante y atras del cargo.
+     * Evita entrada de caracteres invalidos.
      *
-     * @param sc
+     * @param sc Scanner
      * @param editar Parametro booleano para identificar una edicion a una creacion
      * @return cargo 
-     * Metodo que deja cierta libertad a la hora de eligir un cargo para el empleado 
-     * Contiene un unico filtro el cual impide que metamos cargos vacios 
-     * Se elimina espacios existentes delante y atras del cargo
-     * Evita entrada de caracteres invalidos
+     * 
      */
     protected String getCargo(Scanner sc, boolean editar) {
         String cargo;
@@ -119,13 +119,13 @@ public class EmpleadosGetData {
 
     /**
      *
-     * Metodo con parametros
+     * Metodo con parametros que retorna un salario con unos filtros para que no sea cero o un numero
+     * Evita entrada de caracteres invalidos.
      *
-     * @param sc
+     * @param sc Scanner
      * @param editar Parametro booleano para identificar una edicion a una creacion
      * @return salario 
-     * Metodo que retorna un salario con unos filtros para que no sea cero o un numero
-     * Evita entrada de caracteres invalidos
+     * 
      */
     protected Double getSalario(Scanner sc, boolean editar) {
         Double salario;
@@ -149,12 +149,12 @@ public class EmpleadosGetData {
 
     /**
      *
-     * Metododo con parametros
+     * Metododo con parametros que retorna un año con un filtrado para que el año no sea despues de hoy
+     * Evita entrada de caracteres invalidos.
      *
-     * @param sc
+     * @param sc Scanner
      * @return year 
-     * Metodod que retorna un año con un filtrado para que el año no sea despues de hoy
-     * Evita entrada de caracteres invalidos
+     * 
      */
     protected int getYear(Scanner sc) {
         String input;
@@ -180,12 +180,12 @@ public class EmpleadosGetData {
 
     /**
      *
-     * Metodo con parametros
+     * Metodo con parametros que retorna un mes y controla que este no sea 0 o menor o mayor que 12
+     * Evita entrada de caracteres invalidos.
      *
-     * @param sc
+     * @param sc Scanner
      * @return month 
-     * Metodo que retorna un mes y controla que este no sea 0 o menor o mayor que 12
-     * Evita entrada de caracteres invalidos
+     * 
      */
     protected int getMonth(Scanner sc) {
         String input;
@@ -210,12 +210,13 @@ public class EmpleadosGetData {
 
     /**
      * 
-     * Metodo con parametros
-     * @param sc
-     * @param empleado
+     * Metodo con parametros que retorna un dia filtrando y validando que el dia exista.
+     * Evita entrada de caracteres invalidos.
+     * 
+     * @param sc Scanner
+     * @param empleado Empleado
      * @return day
-     * Metodo que retorna un dia filtrando y validando que el dia exista
-     * Evita entrada de caracteres invalidos
+     * 
      */
     protected int getDay(Scanner sc, Empleados empleado) {
         Validaciones validar = new Validaciones();
@@ -242,12 +243,13 @@ public class EmpleadosGetData {
     
     /**
      * 
-     * Metodo con parametros
-     * @param sc
-     * @param empleado
+     * Metodo con parametros que ejecuta los otros metodos asegurando la existencia de la fecha y entrada correcta de datos.
+     * Se valida que no sea anterior al dia actual.
+     * 
+     * @param sc Scanner
+     * @param empleado Empleado
      * @return LocalDate
-     * Metodo que ejecuta los otros metodos asegurando la existencia de la fecha y entrada correcta de datos
-     * Se valida que no sea anterior al dia actual
+     * 
      */
     protected LocalDate getDate(Scanner sc, Empleados empleado){
         LocalDate date;

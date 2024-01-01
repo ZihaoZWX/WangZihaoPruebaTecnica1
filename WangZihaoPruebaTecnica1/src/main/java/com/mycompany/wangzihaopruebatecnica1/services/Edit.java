@@ -7,16 +7,17 @@ import java.util.Scanner;
 
 /**
  *
- * @author Zihao Wang
  * Clase para editar
+ * 
+ * @author Zihao Wang
  */
 public final class Edit {
     
     /**
      * 
      * Constructor con parametros
-     * @param sc
-     * @param controller 
+     * @param sc Scanner
+     * @param controller PersistenceController
      */
     protected Edit(Scanner sc, PersistenceController controller) {
         edit(sc,controller);
@@ -24,12 +25,14 @@ public final class Edit {
     
     /**
      * 
-     * Metodo con parametros
-     * @param sc
-     * @param controller 
-     * Metodo con Menu para poder selecionar que editar
-     * Usaremos la clase Find para poder verificar la existencia del empleado que queremos modificar
-     * Usaremos la clase EmpleadosGetData con diferentes parametros para editar
+     * Metodo con parametros.
+     * Metodo con Menu para poder selecionar que editar.
+     * Usaremos la clase Find para poder verificar la existencia del empleado que queremos modificar.
+     * Usaremos la clase EmpleadosGetData con diferentes parametros para editar.
+     * 
+     * @param sc Scanner
+     * @param controller PersistenceController
+     * 
      */
     private void edit(Scanner sc, PersistenceController controller) {
         Find f=new Find();

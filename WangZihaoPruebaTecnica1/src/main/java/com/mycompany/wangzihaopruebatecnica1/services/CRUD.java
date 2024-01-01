@@ -6,8 +6,8 @@ import java.util.Scanner;
 
 /**
  *
- * @author Zihao Wang
  * Clase principal que inicializa el menu principal
+ * @author Zihao Wang
  */
 public final class CRUD {
     
@@ -22,8 +22,7 @@ public final class CRUD {
     PersistenceController controller=new PersistenceController();
     
     /**
-     * Metodo Start que inicia el programa
-     * Muestra un menu y dependiendo de que numero pongas instancia una clase pasandole ciertos parametros
+     * Metodo Start que inicia el programa y muestra un menu y dependiendo de que numero pongas instancia una clase pasandole ciertos parametros.
      */
     private void start() {
         int elecion = 7;

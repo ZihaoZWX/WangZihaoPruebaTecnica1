@@ -1,4 +1,3 @@
-
 package com.mycompany.wangzihaopruebatecnica1.services;
 
 import com.mycompany.wangzihaopruebatecnica1.controllers.PersistenceController;
@@ -7,15 +6,15 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Zihao Wang
  * Clase que usamos para ver todos los empleados
+ * @author Zihao Wang
  */
 public final class FindAll {
 
     /**
      * 
-     * @param controller 
      * Constructor que ejecuta el metodo que nos muestra los empleados
+     * @param controller PersistenceController
      */
     protected FindAll(PersistenceController controller) {
         findAll(controller);
@@ -23,8 +22,8 @@ public final class FindAll {
     
     /**
      * 
-     * @param controller 
      * Metodo que busca por id y nos muestra todos los Empleados que hay en nuestra base de datos
+     * @param controller PersistenceController
      */
     private void findAll(PersistenceController controller) {
         ArrayList<Empleados> empleado = controller.findAllEmployer();

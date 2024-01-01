@@ -6,8 +6,8 @@ import java.util.Scanner;
 
 /**
  *
- * @author Zihao Wang
  * Clase para buscar por id
+ * @author Zihao Wang
  */
 public final class Find {
     
@@ -21,10 +21,11 @@ public final class Find {
 
     /**
      * 
-     * Constructor con parametros
-     * @param sc
-     * @param controller 
-     * Ejecuta un metodo que imprime por pantalla
+     * Constructor con parametros que ejecuta un metodo que imprime por pantalla.
+     * 
+     * @param sc Scanner
+     * @param controller PersistenceController
+     * 
      */
     protected Find(Scanner sc, PersistenceController controller) {
         verFind(sc,controller);
@@ -32,10 +33,11 @@ public final class Find {
     
     /**
      * 
-     * Metodo con parametros
-     * @param sc
-     * @param controller 
-     * Metodo para imprimir el usuario encontrado con el metodo find
+     * Metodo con parametros para imprimir el usuario encontrado con el metodo find.
+     * 
+     * @param sc Scanner
+     * @param controller PersistenceController
+     * 
      */
     private void verFind(Scanner sc, PersistenceController controller) {
         System.out.println(find(sc, controller,false).toString());
@@ -43,12 +45,12 @@ public final class Find {
 
     /**
      * 
-     * Metodo con parametros
-     * @param sc
-     * @param controller
+     * Metodo con parametros que retorna un empleado con una id concreta
+     * 
+     * @param sc Scanner
+     * @param controller PersistenceController
      * @param edit Variable booleana para imprimir mensaje personalizado si es editar o ver
      * @return Empleado
-     * Metodo que retorna un empleado con una id concreta
      */
     protected Empleados find(Scanner sc, PersistenceController controller, boolean edit) {
         Long id;

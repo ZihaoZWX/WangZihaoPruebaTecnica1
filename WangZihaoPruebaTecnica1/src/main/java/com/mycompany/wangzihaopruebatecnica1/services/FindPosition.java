@@ -6,17 +6,17 @@ import java.util.Scanner;
 
 /**
  *
- * @author Zihao Wang
  * Clase para buscar un empleado por posicion
+ * @author Zihao Wang
  */
 public final class FindPosition {
 
     /**
      * 
-     * Constructor con parametros
-     * @param sc
-     * @param controller 
-     * Constructor que ejecuta la funcion que nos muestra todos los empleados con un cargo concreto
+     * Constructor con parametros que ejecuta la funcion que nos muestra todos los empleados con un cargo concreto
+     * @param sc Scanner
+     * @param controller PersistenceController
+     * 
      */
     protected FindPosition(Scanner sc, PersistenceController controller) {
         findPosition(sc,controller);
@@ -24,11 +24,10 @@ public final class FindPosition {
 
     /**
      * 
-     * Metodo con parametros
-     * @param sc
-     * @param controller 
-     * Metodo que busca por un cargo en concreto y imprime todos los empleados con este cargo por pantalla
-     * Instanciamos la clase FindAll para poder saber que empleados tenemos con que cargos hay
+     * Metodo con parametros que busca por un cargo en concreto y imprime todos los empleados con este cargo por pantalla. Instanciamos la clase FindAll para poder saber que empleados tenemos con que cargos hay.
+     * 
+     * @param sc Scanner
+     * @param controller PersistenceController
      */
     private void findPosition(Scanner sc, PersistenceController controller) {
         String cargo;
