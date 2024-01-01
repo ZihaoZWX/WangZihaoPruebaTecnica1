@@ -2,8 +2,8 @@ package com.mycompany.wangzihaopruebatecnica1.exceptions;
 
 /**
  * 
- * @author Zihao Wang
  * Clase autogenerada de Netbeans que hereda de Exception
+ * @author Zihao Wang
  */
 public class NonexistentEntityException extends Exception {
     /**

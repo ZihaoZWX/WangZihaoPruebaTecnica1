@@ -5,8 +5,8 @@ import java.util.List;
 
 /**
  * 
- * @author Zihao Wang
  * Clase autogenerada de Netbeans que hereda de Exception
+ * @author Zihao Wang
  */
 public class IllegalOrphanException extends Exception {
     private List<String> messages;

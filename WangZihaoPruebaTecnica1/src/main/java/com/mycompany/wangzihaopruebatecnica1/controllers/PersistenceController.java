@@ -9,6 +9,7 @@ import java.util.logging.Logger;
 
 /**
  *
+ * Clase creada para gestionar CRUD
  * @author Zihao Wang
  */
 public class PersistenceController {

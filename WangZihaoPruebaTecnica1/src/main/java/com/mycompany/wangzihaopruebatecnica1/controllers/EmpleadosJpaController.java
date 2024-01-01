@@ -16,8 +16,8 @@ import javax.persistence.criteria.Root;
 
 /**
  * 
- * @author Zihao Wang
  * Clase generada por Netbeans para realizar el CRUD
+ * @author Zihao Wang
  */
 public class EmpleadosJpaController implements Serializable {
 
