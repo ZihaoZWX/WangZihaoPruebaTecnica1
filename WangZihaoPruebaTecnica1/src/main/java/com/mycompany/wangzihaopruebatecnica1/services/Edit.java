@@ -37,7 +37,7 @@ public final class Edit {
     private void edit(Scanner sc, PersistenceController controller) {
         Find f=new Find();
         EmpleadosGetData egd=new EmpleadosGetData();
-        Empleados empleado = f.find(sc, controller,true);
+        Empleados empleado = f.find(sc, controller,2);
         int elecion = 6;
         while (elecion != 0) {
             System.out.println("""

@@ -32,14 +32,10 @@ public final class Delete {
      * @param controller PersistenceController
      */
     private void delete(Scanner sc, PersistenceController controller) {
-        Long id;
-        String input;
-        new FindAll(controller);
+        Find find= new Find();
+        Long id=find.deleteFind(sc, controller);
         while (true) {
             try {
-                System.out.println("Enter the ID of the employee you want to delete");
-                input = sc.nextLine();
-                id = Long.valueOf(input);
                 if (id <= 0) {
                     System.out.println("Error, the id has to be greater than zero");
                 } else {

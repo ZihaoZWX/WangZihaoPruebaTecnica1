@@ -40,7 +40,11 @@ public final class Find {
      * 
      */
     private void verFind(Scanner sc, PersistenceController controller) {
-        System.out.println(find(sc, controller,false).toString());
+        System.out.println(find(sc, controller,1).toString());
+    }
+    
+    protected Long deleteFind(Scanner sc, PersistenceController controller){
+        return find(sc, controller,0).getId();
     }
 
     /**
@@ -52,18 +56,26 @@ public final class Find {
      * @param edit Variable booleana para imprimir mensaje personalizado si es editar o ver
      * @return Empleado
      */
-    protected Empleados find(Scanner sc, PersistenceController controller, boolean edit) {
+    protected Empleados find(Scanner sc, PersistenceController controller, int edit) {
         Long id;
         String input;
         new FindAll(controller);
         while (true) {
             try {
-                System.out.println(edit ? "Enter the ID of the employee you want to edit" : "Enter the ID of the employee you want to view");
+                switch(edit){
+                    case 0 : System.out.println("Enter the ID of the employee you want to delete");
+                    break;
+                    case 1 : System.out.println("Enter the ID of the employee you want to view");
+                    break;
+                    case 2 : System.out.println("Enter the ID of the employee you want to edit");
+                    break;
+                }
+                
                 input = sc.nextLine();
                 id = Long.valueOf(input);
                 if (id <= 0) {
                     System.out.println("Error, ID must be greater than zero");
-                } else if (controller.findEmployer(id).toString().isEmpty()) {
+                } else if (controller.findEmployer(id)==null) {
                     System.out.println("Error, non-existent employee");
                 } else {
                     return controller.findEmployer(id);

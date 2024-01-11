@@ -1,6 +1,7 @@
 
 package com.mycompany.wangzihaopruebatecnica1.controllers;
 
+import com.mycompany.wangzihaopruebatecnica1.exceptions.NonexistentEntityException;
 import com.mycompany.wangzihaopruebatecnica1.models.Empleados;
 import java.util.ArrayList;
 import java.util.List;
@@ -25,7 +26,7 @@ public class PersistenceController {
      * 
      * @param id Parametro id para indicar que empleado eliminar
      */
-    public void deleteEmployer(Long id){
+    public void deleteEmployer(Long id) throws NonexistentEntityException{
         try{
         emplJPA.destroy(id);
         } catch (Exception ex) {
